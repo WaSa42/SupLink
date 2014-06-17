@@ -1,0 +1,17 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="container fos-user-content">
+    <form action="{{ path("fos_user_resetting_send_email") }}" method="post">
+        {% if invalid_username is defined %}
+            <div class="alert alert-danger">
+                {{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <input type="text" id="username" name="username" class="form-control" placeholder="Nom d'utilisateur ou adresse email" required autofocus />
+        </div>
+
+        <button class="btn btn-lg btn-bla btn-block" type="submit">{{ 'resetting.request.submit'|trans }}</button>
+    </form>
+</div>

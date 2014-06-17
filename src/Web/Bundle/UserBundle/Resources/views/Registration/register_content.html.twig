@@ -1,0 +1,18 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="container fos-user-content">
+    <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register fields" role="form">
+       <div class="row">
+            <div class="col-md-6 form-group">{{ form_widget(form.username) }}</div>
+            <div class="col-md-6 form-group">{{ form_widget(form.email) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-group">{{ form_widget(form.plainPassword.first) }}</div>
+            <div class="col-md-6 form-group">{{ form_widget(form.plainPassword.second) }}</div>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-lg btn-success btn-block" value="Envoyer le formulaire" />
+        </div>
+        {{ form_rest(form) }}
+    </form>
+</div>

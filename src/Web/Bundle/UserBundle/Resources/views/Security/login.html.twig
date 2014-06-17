@@ -1,0 +1,29 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends 'WebUserBundle::layout.html.twig' %}
+
+{% block header %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Se connecter</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container fos-user-content">
+        <form class="form-horizontal" role="form" action="{{ path("fos_user_security_check") }}" method="post">
+            {% block fos_user_content %}
+                {% if error %}
+                    <div class="alert alert-danger">
+                        {{ error|trans }}
+                    </div>
+                {% endif %}
+
+                {% include 'WebUserBundle:Security:form.html.twig' with { 'last_username': last_username } %}
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                <button id="_submit" name="_submit" class="btn btn-success btn-lg btn-block" type="submit">{{ 'security.login.submit'|trans }}</button>
+            {% endblock fos_user_content %}
+        </form>
+    </div>
+{% endblock content %}

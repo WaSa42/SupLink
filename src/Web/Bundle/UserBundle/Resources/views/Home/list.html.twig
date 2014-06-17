@@ -1,0 +1,8 @@
+<div class="container">
+    {% if users %}
+        {% for user in users %}
+            {% include "FOSUserBundle:Profile:display_content.html.twig" with { 'user': user } %}
+        {% endfor %}
+    {% endif %}
+    <p style="text-align: center; font-style: italic;">Fin des viewcards.</p>
+</div>

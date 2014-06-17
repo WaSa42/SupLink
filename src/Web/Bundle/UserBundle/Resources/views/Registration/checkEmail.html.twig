@@ -1,0 +1,11 @@
+{% extends "WebUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block content %}
+    {% block fos_user_content %}
+        <div class="container fos-user-content">
+            <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+        </div>
+    {% endblock fos_user_content %}
+{% endblock content %}

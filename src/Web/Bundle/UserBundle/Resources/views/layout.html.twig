@@ -1,0 +1,100 @@
+{% extends '::base.html.twig' %}
+
+{% block navbar %}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('home') }}">2WEB</a>
+
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="btn-group visible-xs hidden-sm hidden-md hidden-lg">
+                            <a class="btn btn-default has-tooltip" href="{{ path('fos_user_profile_show') }}" data-toggle="tooltip" title="Voir mon profil">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </a>
+                        </div>
+                        <div class="btn-group visible-xs hidden-sm hidden-md hidden-lg">
+                            <a class="btn btn-bla has-tooltip" href="{{ path('fos_user_security_logout') }}" data-toggle="tooltip" title="Déconnexion">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                            </a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="btn-group visible-xs hidden-sm hidden-md hidden-lg">
+                            <a class="btn btn-default has-tooltip" href="{{ path('fos_user_registration_register') }}" data-toggle="tooltip" title="S'enregistrer" role="button">
+                                <span class="glyphicon glyphicon-check"></span>
+                            </a>
+                        </div>
+                        <div class="btn-group visible-xs hidden-sm hidden-md hidden-lg">
+                            <a class="btn btn-primary has-tooltip btn-connection" href="{{ path('fos_user_security_login') }}" data-toggle="tooltip" title="Connexion" role="button">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="{% if app.request.attributes.get('_route') == 'article_new' %}active{% endif %}">
+                        <a href="{{ path('home') }}">Accueil</a>
+                </ul>
+
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <div class="navbar-right">
+                        <div class="nav navbar-nav hidden-xs hidden-sm hidden-md visible-lg">
+                            <a class="btn btn-default" href="{{ path('fos_user_profile_show') }}">
+                                <span class="glyphicon glyphicon-user"></span> Voir mon profil
+                            </a>
+                        </div>
+                        <div class="nav navbar-nav hidden-xs visible-sm visible-md hidden-lg">
+                            <a class="btn btn-default has-tooltip" href="{{ path('fos_user_profile_show') }}" data-toggle="tooltip" title="Voir mon profil" role="button">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </a>
+                        </div>
+                        <div class="nav navbar-nav hidden-xs hidden-sm hidden-md visible-lg">
+                            <a class="btn btn-bla" href="{{ path('fos_user_security_logout') }}">
+                                <span class="glyphicon glyphicon-log-out"></span> Déconnexion
+                            </a>
+                        </div>
+                        <div class="nav navbar-nav hidden-xs visible-sm visible-md hidden-lg">
+                            <a class="btn btn-bla has-tooltip" href="{{ path('fos_user_security_logout') }}" data-toggle="tooltip" title="Déconnexion">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                            </a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="navbar-right">
+                        <div class="nav navbar-nav hidden-xs hidden-sm hidden-md visible-lg">
+                            <a class="btn btn-default" href="{{ path('fos_user_registration_register') }}" role="button">
+                                <span class="glyphicon glyphicon-check"></span> S'enregistrer
+                            </a>
+                        </div>
+                        <div class="nav navbar-nav hidden-xs visible-sm visible-md hidden-lg">
+                            <a class="btn btn-default has-tooltip" href="{{ path('fos_user_registration_register') }}" data-toggle="tooltip" title="S'enregistrer" role="button">
+                                <span class="glyphicon glyphicon-check"></span>
+                            </a>
+                        </div>
+                        <div class="nav navbar-nav hidden-xs hidden-sm hidden-md visible-lg">
+                            <a class="btn btn-primary has-tooltip btn-connection" href="{{ path('fos_user_security_login') }}" role="button">
+                                <span class="glyphicon glyphicon-log-in"></span> Connexion
+                            </a>
+                        </div>
+                        <div class="nav navbar-nav hidden-xs visible-sm visible-md hidden-lg">
+                            <a class="btn btn-primary has-tooltip btn-connection" href="{{ path('fos_user_security_login') }}" data-toggle="tooltip" title="Connexion" role="button">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

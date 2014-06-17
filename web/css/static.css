@@ -1,0 +1,293 @@
+body {
+    background-color: #f0f3ec;
+}
+
+
+
+.jumbotron {
+    background-color: #62868d;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+
+
+.well, .list-group-item {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.list-group-item:hover {
+    background-color: #fff7f2;
+}
+
+
+
+.panel-heading {
+    background-color: #e4e4e4 !important;
+}
+
+
+
+.content-all {
+    padding-top: 40px;
+    padding-bottom: 150px;
+}
+
+
+
+.article {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+
+#BlogDuLibreAvis_blogbundle_article_description {
+    min-height: 78px;
+}
+
+
+
+#blog_du_libre_avis_userbundle_user_biography {
+    min-height: 160px;
+}
+
+
+
+.edit-article #BlogDuLibreAvis_blogbundle_article_description {
+    min-height: 100px;
+}
+
+
+
+.bootstrap-filestyle input {
+    text-align: center;
+}
+
+
+
+.edit-article img {
+    margin-bottom: 10px;
+}
+
+
+
+.article em {
+    color: #62868d;
+}
+
+
+
+.article .col-image img {
+    margin: auto;
+}
+
+
+
+.article h2 {
+    margin-top: 0px;
+}
+
+
+
+.article-categories {
+    margin-left: 20px;
+}
+
+
+
+.information-content {
+    margin-bottom: 10px;
+}
+
+
+
+.nav-tabs li a {
+    color: #000000 !important;
+}
+
+
+
+.select2-search-choice {
+    margin-top: 5px !important;
+    background: rgba(98, 134, 141, 0.49) !important;
+    border-color: rgba(83, 115, 122, 0.50) !important;
+    box-shadow: none !important;
+}
+
+
+
+.select2-search-choice-close {
+    margin-top: -1px !important;
+}
+
+
+
+.btn-bla-blue {
+    background-color: rgba(98, 134, 141, 0.49);
+    border-color: rgba(83, 115, 122, 0.50);
+}
+
+
+
+.btn-bla-blue:hover {
+    background-color: rgba(122, 167, 174, 0.48);
+    border-color: rgba(98, 134, 141, 0.49);
+}
+
+
+
+.btn-bla {
+    color: #fff;
+    background-color: #d78b7d;
+    border-color: #bd786b;
+}
+
+
+
+.btn-bla:hover {
+    color: #fff;
+    background-color: #ab6b5f;
+    border-color: #a76d63;
+}
+
+
+
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #364680;
+}
+
+
+
+.btn-facebook:hover {
+    color: #fff;
+    background-color: #4269af;
+    border-color: #3b5998;
+}
+
+
+
+.btn-twitter {
+    color: #fff;
+    background-color: #56a3d9;
+    border-color: #5499cd;
+}
+
+
+
+.btn-twitter:hover {
+    color: #fff;
+    background-color: #5eb7f1;
+    border-color: #56a3d9;
+}
+
+
+
+.btn-google {
+    color: #fff;
+    background-color: #dd4b39;
+    border-color: #ce4836;
+}
+
+
+
+.btn-google:hover {
+    color: #fff;
+    background-color: #f5513f;
+    border-color: #dd4b39;
+}
+
+
+
+.badge-success {
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+
+/* Navbar */
+.navbar-header {
+    max-height: 50px;
+}
+
+
+
+.navbar-right .btn {
+    margin-left: 5px !important;
+}
+
+
+
+div.navbar-right {
+    margin-top: 8px;
+}
+
+
+
+.modal-dialog {
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 1400px) {
+    .modal-dialog {
+        width:95%;
+    }
+}
+
+
+
+/* Footer */
+.footer {
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}
+
+
+
+.footer-content {
+    background-color: #242424;
+    color: #ffffff;
+    min-height: 50px;
+    width: 100%;
+}
+
+
+
+.footer-content a {
+    color: white;
+}
+
+
+
+.copyright {
+    padding-top: 14px;
+}
+
+
+
+.footer .links {
+    padding-right: 50px;
+}
+
+
+
+.link {
+    float: right;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+}
+
+
+
+.link img {
+    width: 100%;
+}

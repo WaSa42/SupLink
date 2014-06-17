@@ -1,0 +1,17 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="well well-lg">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <h2>Informations</h2>
+                <strong>{{ 'profile.show.username'|trans }} :</strong> {{ user.username }}<br>
+                <strong>{{ 'profile.show.email'|trans }} :</strong> {{ user.email }}<br>
+                {% if user.lastName %}<strong>Nom :</strong> {{ user.lastName }}<br>{% endif %}
+                {% if user.firstName %}<strong>Prénom :</strong> {{ user.firstName }}<br>{% endif %}
+                {% if user.lastName %}<strong>Job :</strong> {{ user.job }}<br>{% endif %}
+                {% if user.firstName %}<strong>Compétences :</strong> {{ user.skills }}<br>{% endif %}
+            </div>
+        </div>
+    </div>
+</div>

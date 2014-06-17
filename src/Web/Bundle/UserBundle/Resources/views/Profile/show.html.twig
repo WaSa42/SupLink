@@ -1,0 +1,25 @@
+{% extends "WebUserBundle::layout.html.twig" %}
+
+{% block header %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Mon profil</h1>
+            <p>
+                <a href="{{ path('fos_user_profile_edit') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-edit"></span> Éditer mon profil
+                </a>
+                <a href="{{ path('fos_user_change_password') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-log-in"></span> Modifier mon mot de passe
+                </a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% block fos_user_content %}
+        <div class="container">
+            {% include "FOSUserBundle:Profile:show_content.html.twig" %}
+        </div>
+    {% endblock fos_user_content %}
+{% endblock %}

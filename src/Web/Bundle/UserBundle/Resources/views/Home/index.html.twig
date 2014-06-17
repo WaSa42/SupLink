@@ -1,0 +1,21 @@
+{% extends 'WebUserBundle::layout.html.twig' %}
+
+{% block header %}
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>2WEB - TP Noté</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    {% include 'WebUserBundle:Home:list.html.twig' with { 'users': users } %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
